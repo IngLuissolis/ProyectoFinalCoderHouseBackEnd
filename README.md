@@ -33,12 +33,13 @@ Usuarios creados para realizar Test:
         - GET: deberá obtener todos los usuarios, éste sólo debe devolver los datos principales como nombre, correo, tipo de cuenta (rol).
 
         - DELETE: deberá limpiar a todos los usuarios que no hayan tenido conexión en los últimos 2 días. (puedes hacer pruebas con los últimos 30 minutos, por ejemplo). Deberá enviarse un correo indicando al usuario que su cuenta ha sido eliminada por inactividad.
-
-    Archivo ecommerceCoderHouse-AllUsers.Gif OK
+  
+![ecommerceCoderHouse-AllUsers](https://github.com/IngLuissolis/ProyectoFinalCoderHouseBackEnd/assets/72393640/fd885304-8dc5-481b-b8fc-2036d5d1d184)
 
     - Desde el router de /api/users, crear una vista para poder visualizar, modificar el rol y eliminar un usuario. Esta vista únicamente será accesible para el administrador del ecommerce
 
-    Archivo ecommerceCoderHouse-Admin_Eliminar.Gif OK
+![ecommerceCoderHouse-Admin_Eliminar](https://github.com/IngLuissolis/ProyectoFinalCoderHouseBackEnd/assets/72393640/bf366eff-dd29-4905-9233-17d1a3b75411)
+
 
     Archivo ecommerceCoderHouse-Admin_Modificar.Gif OK
 
