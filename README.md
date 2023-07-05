@@ -36,6 +36,7 @@ Usuarios creados para realizar Test:
   
 ![ecommerceCoderHouse-AllUsers](https://github.com/IngLuissolis/ProyectoFinalCoderHouseBackEnd/assets/72393640/fd885304-8dc5-481b-b8fc-2036d5d1d184)
 
+-
     - Desde el router de /api/users, crear una vista para poder visualizar, modificar el rol y eliminar un usuario. Esta vista únicamente será accesible para el administrador del ecommerce
 
 ![ecommerceCoderHouse-Admin_Eliminar](https://github.com/IngLuissolis/ProyectoFinalCoderHouseBackEnd/assets/72393640/bf366eff-dd29-4905-9233-17d1a3b75411)
@@ -43,14 +44,17 @@ Usuarios creados para realizar Test:
 
 ![ecommerceCoderHouse-Admin_Modificar](https://github.com/IngLuissolis/ProyectoFinalCoderHouseBackEnd/assets/72393640/1669dc69-f491-44df-9a77-75896081b99e)
 
+-
     - Modificar el endpoint que elimina productos, para que, en caso de que el producto pertenezca a un usuario premium, le envíe un correo indicándole que el producto fue eliminado.
 
 ![ecommerceCoderHouse-Premium_EnviarMail](https://github.com/IngLuissolis/ProyectoFinalCoderHouseBackEnd/assets/72393640/96707538-e45a-4411-b011-791d070ccf7a)
 
+-
     - Finalizar las vistas pendientes para la realización de flujo completo de compra. NO ES NECESARIO tener una estructura específica de vistas, sólo las que tú consideres necesarias para poder llevar a cabo el proceso de compra.
 
 ![ecommerceCoderHouse-ProcesoCompra](https://github.com/IngLuissolis/ProyectoFinalCoderHouseBackEnd/assets/72393640/9b8a67ae-0811-4f4d-8efd-e5c6e913de65)
 
+-
     - Realizar el despliegue de tu aplicativo en la plataforma de tu elección (Preferentemente Railway.app, pues es la abarcada en el curso) y corroborar que se puede llevar a cabo un proceso de compra completo.
 
         - link Railway: https://proyectofinalcoderhousebackend-production.up.railway.app/api/views
