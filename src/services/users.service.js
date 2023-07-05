@@ -54,7 +54,7 @@ export const inactiveUsersService = async () => {
   for (const user of inactiveUsers) {
     //console.log('deleting user: ', user);
     // Elimina el usuario de la base de datos
-    //await usersMongo.delete(user._id);
+    await usersMongo.delete(user._id);
 
     // Envía el correo electrónico al usuario eliminado por inactividad
     const subject = "Eliminación de cuenta por inactividad";
