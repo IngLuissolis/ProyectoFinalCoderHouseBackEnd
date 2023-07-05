@@ -13,20 +13,17 @@ https://github.com/IngLuissolis/ProyectoFinalCoderHouseBackEnd/
 
 Usuarios creados para realizar Test:
 
+    - role: admin
+    - email: edusolis@yahoo.com.ar
+    - password: 12345
+    
     - role: user
-
-        - _id: 648b7fece5c1bba269de770f
-        - password: 12345
+    - email: eduardo@gmail.com
+    - password: 12345
 
     - role: premium
-
-        - _id: 648b5b7b35f4b8ff1c5f8fc1
-        - password: 12345
-
-    - role: admin
-
-        - _id: 648b8020e5c1bba269de7711
-        - password: 12345
+    - email: ingedusolis@gmail.com
+    - password: 12345
 
 
 - Requerimientos:
@@ -55,7 +52,7 @@ Usuarios creados para realizar Test:
 
     - Realizar el despliegue de tu aplicativo en la plataforma de tu elección (Preferentemente Railway.app, pues es la abarcada en el curso) y corroborar que se puede llevar a cabo un proceso de compra completo.
 
-        - link Railway: 
+        - link Railway: https://proyectofinalcoderhousebackend-production.up.railway.app/api/views
 
 ## Desafio Cuarta Practica Integradora
 
