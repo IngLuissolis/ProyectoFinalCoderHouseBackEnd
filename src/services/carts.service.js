@@ -25,6 +25,11 @@ export const deleteCartService = async (id) => {
     return cartId;
 }
 
+export const deleteProductFromCartService = async (cid, pid) => {
+    const productDeletedFromCart = await cartsMongo.removeProductFromCart(cid, pid);
+    return productDeletedFromCart;
+}
+
 export const addProductInCartService = async (cid, pid, quantity) => {
     const newProductInCart = await cartsMongo.addProductInCart(cid, pid, quantity);
     return newProductInCart;

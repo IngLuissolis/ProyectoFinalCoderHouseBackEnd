@@ -31,6 +31,28 @@ class CartsMongo extends BasicMongo {
     }
   }
 
+  async removeProductFromCart(cid, pid) {
+    try {
+
+      const cartDB = await cartsModel
+        .findById(cid)
+        .populate("products.product");
+  
+      const existingProductIndex = cartDB.products.findIndex(
+        (product) => product._id.toString() === pid
+      );
+  
+      if (existingProductIndex !== -1) {
+        cartDB.products.splice(existingProductIndex, 1);
+        cartDB.save();
+      }
+  
+      return cartDB;
+    } catch (error) {
+      return error;
+    }
+  }
+
   async finalizePurchase(cid) {
     try {
       const cartDB = await cartsModel

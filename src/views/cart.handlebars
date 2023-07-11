@@ -10,6 +10,7 @@
             <th scope="col">Nombre</th>
             <th scope="col">Precio</th>
             <th scope="col">Dueño</th>
+            <th scope="col">Acción</th>
         </tr>
     </thead>
     {{#each cartProducts}}
@@ -19,6 +20,9 @@
         <td>{{nombre}}</td>
         <td>{{precio}}</td>
         <td>{{owner}}</td>
+        <td>
+          <button type="button" class="btn btn-danger" onclick="removeProductFromCart('{{productCartId}}')">Eliminar</button>
+        </td>
     </tbody>
     {{/each}}
 </table>
@@ -33,6 +37,9 @@
 
 <!-- Controlador de eventos para el botón "Generar Ticket" -->
 <script>
+
+  const cartId = '{{cartId}}';
+
   function generateTicket(cartId) {
     
     fetch(`/api/carts/${cartId}/purchase`)
@@ -67,6 +74,52 @@
         console.error(error);
       });
   }
+
+  async function removeProductFromCart(productId) {
+
+  console.log('removeProductFromCart: ' + productId);
+  
+  try {
+    const response = await fetch(`/api/carts/${cartId}/products/${productId}`, {
+      method: 'DELETE'
+    });
+
+    console.log('response: ' + response);
+  
+    if (response.ok) {
+      // El producto se eliminó correctamente
+      Swal.fire({
+        title: 'Producto Eliminado',
+        text: 'El producto se eliminó correctamente del carrito.',
+        icon: 'success',
+        onClose: () => {
+          location.reload(); // Recargar la página
+        }
+      });
+    } else {
+      // No se pudo eliminar el producto
+      Swal.fire({
+        title: 'Error',
+        text: 'Hubo un error al eliminar el producto del carrito.',
+        icon: 'error',
+        willClose: () => {
+          location.reload(); // Recargar la página
+        }
+      });
+    }
+  } catch (error) {
+    console.error(error);
+    // Error en la solicitud
+    Swal.fire({
+      title: 'Error',
+      text: 'Hubo un error al realizar la solicitud para eliminar el producto.',
+      icon: 'error',
+      willClose: () => {
+        location.reload(); // Recargar la página
+      }
+    });
+  }
+}
 
 
 </script>

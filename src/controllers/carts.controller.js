@@ -8,6 +8,7 @@ import {
   deleteCartService,
   addProductInCartService,
   finalizePurchaseService,
+  deleteProductFromCartService
 } from "../services/carts.service.js";
 
 import { findOneProductService } from '../services/products.service.js';
@@ -51,6 +52,7 @@ export const findOneCartController = async (req, res) => {
 
       return {
         quantity: product.quantity,
+        productCartId: product._id,
         nombre: producto.nombre,
         precio: producto.precio,
         owner: producto.owner
@@ -94,6 +96,19 @@ export const deleteCartController = async (req, res) => {
     res.json({ message: "Error", error });
   }
 };
+
+export const deleteProductFromCartController = async (req, res) => {
+  let { cid } = req.params;
+  let { pid } = req.params;
+  
+  try {
+    await deleteProductFromCartService(cid, pid);
+    res.sendStatus(200); // Enviar respuesta 200 OK
+  } catch (error) {
+    res.json({ message: "Error", error });
+  }
+
+}
 
 export const addProductInCartController = async (req, res) => {
   let { cid } = req.params;
